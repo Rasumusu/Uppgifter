@@ -156,7 +156,7 @@ public class Interface {
 		btnShowAccounts.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String pNbr = textField_pNbr3.getText();
-				textArea.setText("");
+				textArea.setText("Finns inga konton kopplade till personnumret");
 				for (Account a : controller.findPerson(pNbr).getHarAccount()) {	
 					textArea.append(a.getOwner().getName().toUpperCase() + " har konton: " + a.getNbr() + "\n");
 				}
