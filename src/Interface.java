@@ -68,7 +68,7 @@ public class Interface {
 			public void actionPerformed(ActionEvent e) {
 				String pNbr = textField_pNbr3.getText();
 				controller.removePerson(pNbr);
-				textArea.setText("Person borttagen ");
+				textArea.setText("Person borttagen");
 			}
 		});
 		btnNewButton_removePerson.setBounds(364, 40, 106, 25);
