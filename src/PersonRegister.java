@@ -21,7 +21,7 @@ public class PersonRegister {
 				return null;
 			}
 
-	public LinkedList<Account> findPersonAccount(String pNbr) {
+	public LinkedList<Account> findOwnersAccount(String pNbr) {
 		Person g = findPerson(pNbr);
 		return g.getHarAccount();
 	}

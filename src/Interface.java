@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 import java.awt.Color;
 import javax.swing.JSeparator;
+import java.awt.Font;
 
 public class Interface {
 
@@ -58,7 +59,9 @@ public class Interface {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(240, 128, 128));
+		frame.setForeground(Color.DARK_GRAY);
+		frame.setBackground(Color.DARK_GRAY);
+		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
 		frame.setBounds(100, 100, 541, 524);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -135,6 +138,7 @@ public class Interface {
 		frame.getContentPane().add(btnLggTillKonto);
 
 		textArea = new JTextArea();
+		textArea.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		textArea.setBounds(26, 296, 467, 178);
 		frame.getContentPane().add(textArea);
 

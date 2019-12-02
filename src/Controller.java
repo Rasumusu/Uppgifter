@@ -27,25 +27,14 @@ public class Controller {
 		a.setNbr(Nbr);
 	}
 	
-	public LinkedList<Account> findPersonAccounts (String pNbr) {
-		return register.findPersonAccount(pNbr);
+	public LinkedList<Account> findOwnersAccounts (String pNbr) {
+		return register.findOwnersAccount(pNbr);
 	}
-	public void setOwner(Person p){
-		
-	}
-	public Account findSpecificAccount (String pNbr, String nbr){
-		LinkedList<Account> tmpList = register.findPersonAccount(pNbr);
-		if (tmpList != null) {
-			for (Account a : tmpList) {
-				if (a.getNbr().equals(nbr)) {
-					return a;
-				}	
-			}
-		}
-		return null;
-	}
-
+	
+	
 }
+
+
 
 	
 	
