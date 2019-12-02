@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 import javax.swing.JFrame;
 
 public class Controller {
@@ -27,9 +25,7 @@ public class Controller {
 		a.setNbr(Nbr);
 	}
 	
-	public LinkedList<Account> findOwnersAccounts (String pNbr) {
-		return register.findOwnersAccount(pNbr);
-	}
+
 	
 	
 }

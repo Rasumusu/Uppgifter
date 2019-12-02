@@ -7,7 +7,7 @@ public class Person {
 	
 	private LinkedList <Account> harAccount;
 	
-	public String getName() {
+	public String getName() {								//Setters och getters för namn
 		return name;
 	}
 	
@@ -19,7 +19,7 @@ public class Person {
 		this.setHarAccount(new LinkedList<Account>());
 	}
 	
-	public String getpNbr() {
+	public String getpNbr() {								//Setters och getters för personnummer
 		return pNbr;
 		
 	}

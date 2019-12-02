@@ -21,10 +21,6 @@ public class PersonRegister {
 				return null;
 			}
 
-	public LinkedList<Account> findOwnersAccount(String pNbr) {
-		Person g = findPerson(pNbr);
-		return g.getHarAccount();
-	}
 	
 	public void addPerson(Person p) {
 		persons.add(p);
@@ -32,10 +28,6 @@ public class PersonRegister {
 	
 	public LinkedList<Person> getPersons() {
 		return persons;
-	}
-	
-	public void setPersons(LinkedList <Person> newPersons) {
-		persons = newPersons;
 	}
 	
 }

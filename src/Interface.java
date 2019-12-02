@@ -70,8 +70,9 @@ public class Interface {
 		btnNewButton_removePerson.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String pNbr = textField_pNbr3.getText();
+				Person p = controller.findPerson(pNbr);
+				textArea.setText(p.getName().toUpperCase() + " är borttagen.");
 				controller.removePerson(pNbr);
-				textArea.setText("Person borttagen");
 			}
 		});
 		btnNewButton_removePerson.setBounds(364, 40, 106, 25);
@@ -83,7 +84,7 @@ public class Interface {
 				String pNbr = textField_pNbr3.getText();
 				Person p = controller.findPerson(pNbr);
 				if (p != null) {
-					textArea.setText(p.getName());
+					textArea.setText(p.getName().toUpperCase());
 				} else {
 					textArea.setText("Inget resultat");
 
@@ -103,24 +104,24 @@ public class Interface {
 				textArea.setText("Personen är tillagd i registret");
 			}
 		});
-		btnNewButton_addPerson.setBounds(364, 131, 106, 25);
+		btnNewButton_addPerson.setBounds(341, 131, 129, 25);
 		frame.getContentPane().add(btnNewButton_addPerson);
 
 		textField_Name = new JTextField();
-		textField_Name.setBounds(26, 132, 116, 22);
+		textField_Name.setBounds(173, 134, 116, 22);
 		frame.getContentPane().add(textField_Name);
 		textField_Name.setColumns(10);
 
 		lblNewLabel = new JLabel("Namn:");
-		lblNewLabel.setBounds(26, 110, 56, 16);
+		lblNewLabel.setBounds(173, 112, 56, 16);
 		frame.getContentPane().add(lblNewLabel);
 
 		lblNewLabel_1 = new JLabel("Persnr:");
-		lblNewLabel_1.setBounds(173, 110, 106, 16);
+		lblNewLabel_1.setBounds(26, 112, 106, 16);
 		frame.getContentPane().add(lblNewLabel_1);
 
 		textField_pNbr = new JTextField();
-		textField_pNbr.setBounds(173, 132, 116, 22);
+		textField_pNbr.setBounds(26, 134, 116, 22);
 		frame.getContentPane().add(textField_pNbr);
 		textField_pNbr.setColumns(10);
 
@@ -130,11 +131,11 @@ public class Interface {
 				controller.addAccount(new Account(),
 				controller.findPerson(textField_pNbr2.getText()), textField_accNbr.getText());
 				Person tmp = controller.findPerson(textField_pNbr.getText());
-				textArea.setText("Kontot " + (textField_accNbr.getText()) + " har lagts till personen: " + tmp.getName());
+				textArea.setText("Kontot " + (textField_accNbr.getText()) + " har lagts till personen: " + tmp.getName().toUpperCase());
 
 			}
 		});
-		btnLggTillKonto.setBounds(364, 217, 106, 25);
+		btnLggTillKonto.setBounds(341, 217, 129, 25);
 		frame.getContentPane().add(btnLggTillKonto);
 
 		textArea = new JTextArea();
@@ -143,11 +144,11 @@ public class Interface {
 		frame.getContentPane().add(textArea);
 
 		lblAccountNumber = new JLabel("Kontonummer:");
-		lblAccountNumber.setBounds(26, 191, 106, 16);
+		lblAccountNumber.setBounds(173, 193, 106, 16);
 		frame.getContentPane().add(lblAccountNumber);
 
 		textField_accNbr = new JTextField();
-		textField_accNbr.setBounds(26, 218, 116, 22);
+		textField_accNbr.setBounds(173, 220, 116, 22);
 		frame.getContentPane().add(textField_accNbr);
 		textField_accNbr.setColumns(10);
 
@@ -157,7 +158,7 @@ public class Interface {
 				String pNbr = textField_pNbr3.getText();
 				textArea.setText("");
 				for (Account a : controller.findPerson(pNbr).getHarAccount()) {	
-					textArea.append(a.getOwner().getName() + " har konton: " + a.getNbr() + "\n");
+					textArea.append(a.getOwner().getName().toUpperCase() + " har konton: " + a.getNbr() + "\n");
 				}
 				
 			}
@@ -166,11 +167,11 @@ public class Interface {
 		frame.getContentPane().add(btnShowAccounts);
 		
 		JLabel lblPersnr = new JLabel("Persnr.");
-		lblPersnr.setBounds(173, 192, 46, 14);
+		lblPersnr.setBounds(26, 195, 46, 14);
 		frame.getContentPane().add(lblPersnr);
 		
 		textField_pNbr2 = new JTextField();
-		textField_pNbr2.setBounds(173, 219, 116, 20);
+		textField_pNbr2.setBounds(26, 222, 116, 20);
 		frame.getContentPane().add(textField_pNbr2);
 		textField_pNbr2.setColumns(10);
 		
